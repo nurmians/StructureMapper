@@ -44,10 +44,14 @@ import gc
 import multiprocessing
 import atexit
 
-from Bio import SeqIO
-from Bio.Blast.Applications import NcbiblastxCommandline
-from Bio.PDB.PDBParser import PDBParser
-from Bio.PDB.PDBList import PDBList
+try:
+    from Bio import SeqIO
+    from Bio.Blast.Applications import NcbiblastxCommandline
+    from Bio.PDB.PDBParser import PDBParser
+    from Bio.PDB.PDBList import PDBList
+except ImportError
+    stderr.write("Biopython installation not found. Try running: 'pip install biopython'.")  
+
 
 from format_results import *
 from collect_results import *

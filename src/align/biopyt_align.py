@@ -2,33 +2,6 @@
 # coding=UTF-8
 # -*- coding: UTF-8 -*-
 
-import sys
-import os
-import re
-from subprocess import call
-
-
-from Bio import SeqIO
-from Bio.Seq import Seq
-from Bio.SeqRecord import SeqRecord
-from Bio.Alphabet import IUPAC
-from Bio.Blast.Applications import NcbiblastxCommandline
-from Bio.PDB.PDBParser import PDBParser
-from Bio.PDB.PDBList import PDBList
-from Bio import pairwise2
-from Bio.SubsMat import MatrixInfo as matlist
-
-curdir = os.path.dirname(os.path.abspath(__file__))
-
-sys.path.append(  "%s/../utils" % curdir)
-from struct_methods import *
-from fileops import *
-from obj_cache import ObjCache
-import online_pdb
-
-sys.path.append(  "%s/../asa" % curdir)
-import pdbatoms
-
 # This file is part of the StructureMapper algorithm.
 # Please cite the authors if you find this software useful
 #
@@ -58,6 +31,33 @@ import pdbatoms
 # THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+import sys
+import os
+import re
+from subprocess import call
+
+
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+from Bio.Alphabet import IUPAC
+from Bio.Blast.Applications import NcbiblastxCommandline
+from Bio.PDB.PDBParser import PDBParser
+from Bio.PDB.PDBList import PDBList
+from Bio import pairwise2
+from Bio.SubsMat import MatrixInfo as matlist
+
+curdir = os.path.dirname(os.path.abspath(__file__))
+
+sys.path.append(  "%s/../utils" % curdir)
+from struct_methods import *
+from fileops import *
+from obj_cache import ObjCache
+import online_pdb
+
+sys.path.append(  "%s/../asa" % curdir)
+import pdbatoms
 
 g_pairwise_plock = False
 

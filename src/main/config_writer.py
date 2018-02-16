@@ -1,3 +1,7 @@
+#!/usr/bin/python
+# coding=UTF-8
+# -*- coding: UTF-8 -*-
+
 # This file is part of the StructureMapper algorithm.
 # Please cite the authors if you find this software useful
 #
