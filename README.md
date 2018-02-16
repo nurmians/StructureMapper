@@ -16,14 +16,14 @@ additional executables are installed locally. The algorithm has been run and tes
 
 ## Python
 
-Install Python first. The algorithm is written using Python 2.7.
-**Linux:** ```sudo apt-get install python2.7```
-**Windows:** https://www.python.org/downloads/windows/
+Install Python first. The algorithm is written using Python 2.7.  
+**Linux:** ```sudo apt-get install python2.7```  
+**Windows:** https://www.python.org/downloads/windows/  
 
-the biopython module might require also the package libpython2.7-dev
-**Linux:** ```sudo apt-get install libpython2.7-dev```
+the biopython module might require also the package libpython2.7-dev  
+**Linux:** ```sudo apt-get install libpython2.7-dev```  
 
-Install required python modules using pip:
+Install required python modules using pip:  
 
 ```
 pip install biopython  
@@ -42,8 +42,8 @@ Binaries:
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
 **Linux:**
-Create a folder and download and extract the file
-```wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz```
+Create a folder and download and extract the file:  
+```wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz```  
 ```tar -zxvf pdbaa.tar.gz```
 
 **Windows:**
@@ -51,7 +51,7 @@ You can use the update_blastdb.pl perl script that comes with the BLAST binaries
 
 ```
 perl update_blastdb.pl pdbaa
-"C:\Program Files\7-Zip\7z.exe" e -aoa pdbaa.tar.gz
+"C:\Program Files\7-Zip\7z.exe" e -aoa pdbaa.tar.gz  
 "C:\Program Files\7-Zip\7z.exe" x -aoa pdbaa.tar
 ```
 
@@ -60,9 +60,9 @@ The homologous structures are downloaded if and when they are needed. For large 
 ## DSSP
 
 The algorithm uses DSSP for secondary structure evaluations. 
-Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
-**Linux:** ```wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64```
-make sure to set ```chmod a+x dssp-2.0.4-linux-amd64``` to be able to run it
+Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/  
+**Linux:** ```wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64```  
+make sure to set ```chmod a+x dssp-2.0.4-linux-amd64``` to be able to run it.  
 
 The algorithm can also dowload the dssp files if the DSSP algorithm is not installed locally.
 
