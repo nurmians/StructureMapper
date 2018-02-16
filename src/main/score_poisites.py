@@ -1825,7 +1825,7 @@ def main():
 
     if len( config_file) > 1 and not os.path.isfile( config_file):
         sys.stderr.write("INFO: No configuration file was found. Creating a default file: '%s'.\n" % config_file)
-        sys.stderr.write("INFO: Try option --autoconfig after required components such as BLAST have been installed.\n" % config_file)
+        sys.stderr.write("INFO: Try option --autoconfig after required components such as BLAST have been installed.\n")
         WriteConfig( config_file, aAutoConfig=False )
         Exit( 0)
 
