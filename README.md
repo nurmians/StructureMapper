@@ -40,7 +40,7 @@ Or simply download the suitable executable files for your system:
 Binaries:
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-The path of the BLAST executable can be added to the system path or provided with the DEFAULT_BLASTP param in the config.ini file (see below).
+The path of the BLAST executable ('bin' folder) can be added to the system path or provided with the DEFAULT_BLASTP param in the config.ini file (see below).
 
 **Linux:**
 Create a folder and download and extract the file:  
