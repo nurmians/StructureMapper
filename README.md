@@ -19,7 +19,7 @@ Install Python first. The algorithm is written using Python 2.7.
 **Linux:** ```sudo apt-get install python2.7```  
 **Windows:** https://www.python.org/downloads/windows/  
 
-the biopython module might require also the package libpython2.7-dev  
+The biopython module might require also the package libpython2.7-dev  
 **Linux:** ```sudo apt-get install libpython2.7-dev```  
 
 Install required python modules using pip:  
