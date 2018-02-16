@@ -73,7 +73,7 @@ Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
 **Linux:** ```wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64```  
 make sure to set ```chmod a+x dssp-2.0.4-linux-amd64``` to be able to run it.  
 
-The algorithm can also dowload the dssp files if the DSSP algorithm is not installed locally.
+The algorithm can also download the dssp files if the DSSP algorithm is not installed locally.
 
 ## Disorder predictions
 
