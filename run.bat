@@ -1,0 +1,1 @@
+python src/main/score_poisites.py -b 3 -t 1 src/main/test/test_input.fasta ./results
