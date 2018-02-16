@@ -37,10 +37,14 @@ Instructions can be found [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=We
 
 Or simply download the suitable executable files for your system:
 
-Binaries:
+Blast binaries (all operating systems):
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-The path of the BLAST executable ('bin' folder) can be added to the system path or provided with the DEFAULT_BLASTP param in the config.ini file (see below). Only the BLAST database 'pdbaa' is required for running StructureMapper. The pdbaa databse contains sequences found in the [PDB](http://www.rcsb.org).
+The path of the BLAST executable folder ('bin') can be added to the system path or provided with the 'DEFAULT_BLASTP' param in the config.ini file (see below). Only BLAST database 'pdbaa' is required for running StructureMapper. The pdbaa database contains sequences found in the [PDB](http://www.rcsb.org).
+
+### Downloading the BLAST pdbaa database:
+
+First, create and enter the folder use wish to use for the database files.
 
 **Linux:**
 Create a folder and download and extract the file:  
@@ -48,7 +52,7 @@ Create a folder and download and extract the file:
 ```tar -zxvf pdbaa.tar.gz```  
 
 **Windows:**
-You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and for example 7-zip to extract the packages
+You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and, for example, 7-zip to extract the packages (Requires [Perl](https://www.perl.org/get.html#win32) and [7-zip](http://www.7-zip.org) to be installed).
 
 ```
 perl update_blastdb.pl pdbaa
@@ -77,7 +81,7 @@ If you are interested in disordered regions you can download Iupred from http://
 
 ## Configuration
 
-The algorithm is run by executing "score_poisites.py" in the src/main directory.  
+The algorithm is run by executing "python score_poisites.py" in the src/main directory.  
 Example usage (run.bat):  
 ```python src/main/score_poisites.py -b 3 -t 1 src/main/test/test_input.fasta ./results```
 
