@@ -2,6 +2,10 @@
 
 The StructureMapper algorithm processes amino acid sequences of proteins with marked points of interest and finds and analyzes associated structural data. An online version of the algorithm is available at http://structuremapper.uta.fi
 
+The offline version of the algorithm is designed to process points of interest in a high-throughput manner, effectively utilizing parallellization.
+
+If you find the StructureMapper algorithm useful please cite the associated article (https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty086/4857361), Bioinforamtics 2018, open access.
+
 # Installing the algorithm
 
 Setting up the algorithm for running it locally on either windows or a linux machine (Mac not tested).
