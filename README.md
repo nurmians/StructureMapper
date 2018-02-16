@@ -40,7 +40,7 @@ Or simply download the suitable executable files for your system:
 Binaries:
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-The path of the BLAST executable ('bin' folder) can be added to the system path or provided with the DEFAULT_BLASTP param in the config.ini file (see below).
+The path of the BLAST executable ('bin' folder) can be added to the system path or provided with the DEFAULT_BLASTP param in the config.ini file (see below). Only the BLAST database 'pdbaa' is required for running StructureMapper. The pdbaa databse contains sequences found in the [PDB](http://www.rcsb.org).
 
 **Linux:**
 Create a folder and download and extract the file:  
@@ -55,6 +55,10 @@ perl update_blastdb.pl pdbaa
 "C:\Program Files\7-Zip\7z.exe" e -aoa pdbaa.tar.gz  
 "C:\Program Files\7-Zip\7z.exe" x -aoa pdbaa.tar
 ```
+
+Example config.ini lines: 
+```DEFAULT_BLASTP = C:/blast/blast-2.7.1+/bin```  
+```BLAST_DB = C:/blast/DB/```
 
 The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files and by using precalculated ASA files.
 
