@@ -52,7 +52,7 @@ Create a folder and download and extract the file:
 ```tar -zxvf pdbaa.tar.gz```  
 
 **Windows:**
-You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and, for example, 7-zip to extract the packages (Requires [Perl](https://www.perl.org/get.html#win32) and [7-zip](http://www.7-zip.org) to be installed).
+You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and, 7-zip (for example) to extract the packages (requires [Perl](https://www.perl.org/get.html#win32) and [7-zip](http://www.7-zip.org) to be installed).
 
 ```
 perl update_blastdb.pl pdbaa
@@ -64,7 +64,7 @@ Example config.ini lines:
 ```DEFAULT_BLASTP = C:/blast/blast-2.7.1+/bin```   
 ```BLAST_DB = C:/blast/DB/```
 
-The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files in advance and by using precalculated ASA files.
+The structures required for the analysis are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files in advance and by using precalculated ASA files.
 
 ## DSSP
 
