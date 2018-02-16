@@ -60,7 +60,7 @@ Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
 (wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64)
 make sure to set chmod a+x dssp-2.0.4-linux-amd64 to be able to run it
 
-The algorithm can also dowload the dssp files if the algorithm is not installed locally.
+The algorithm can also dowload the dssp files if the DSSP algorithm is not installed locally.
 # Disorder predictions
 
 If you are interested in disordered regions you can download Iupred from http://iupred.enzim.hu and specify the executable in the algorithm's config file (config.ini, created on first run).
