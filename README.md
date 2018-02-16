@@ -9,11 +9,12 @@ If you find the StructureMapper algorithm useful please cite the authors and the
 
 https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty086/4857361
 
-# Installing the algorithm
+## Installing the algorithm
 
-Setting up the algorithm for running it locally on either windows or a linux machine (Mac not tested).
+Only a Python 2.7 installation is required for running the algorithm. For faster processing, it is recommended that 
+additional executables are installed locally. The algorithm has been run and tested on Windows and Linux machines.
 
-# Python
+## Python
 
 Install Python first. The algorithm is written using Python 2.7.
 (sudo apt-get install python2.7)
@@ -23,11 +24,10 @@ the biopython module might require also the package libpython2.7-dev
 
 Install required python modules using pip:
 
-pip install biopython
+pip install biopython  
+pip install numpy  
 
-pip install numpy
-
-# BLAST
+## BLAST
 
 Setup a local BLAST DB (<50MB) and the blast executable.
 
@@ -39,12 +39,12 @@ Or simply download the suitable executable files for your system:
 Binaries:
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-Linux:
+### Linux:
 Create a folder and download and extract the file
 wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz
 tar -zxvf pdbaa.tar.gz
 
-Windows:
+### Windows:
 You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and for example 7-zip to extract the packages
 
 perl update_blastdb.pl pdbaa
@@ -53,7 +53,7 @@ perl update_blastdb.pl pdbaa
 
 The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files and precalculating ASA and ASA_SC files.
 
-# DSSP
+## DSSP
 
 The algorithm uses DSSP for secondary structure evaluations. 
 Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
@@ -61,15 +61,16 @@ Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
 make sure to set chmod a+x dssp-2.0.4-linux-amd64 to be able to run it
 
 The algorithm can also dowload the dssp files if the DSSP algorithm is not installed locally.
-# Disorder predictions
+
+## Disorder predictions
 
 If you are interested in disordered regions you can download Iupred from http://iupred.enzim.hu and specify the executable in the algorithm's config file (config.ini, created on first run).
 
-# Configuration
+## Configuration
 
 The algorithm is run by executing "score_poisites.py" in the src/main directory.
-Example usage: 
-"python score_poisites.py -t -1 -s -p 1 -b 4 "myinputfile.fasta" ..\results\myinput_results"
+Example usage:  
+**python score_poisites.py -t -1 -s -p 1 -b 4 "myinputfile.fasta" ..\results\myinput_results**
 
 A config.ini file is created on the first run, and it needs to be modified to contain all the required 
 paths BLAST (executable and DB).
