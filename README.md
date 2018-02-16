@@ -45,7 +45,7 @@ The path of the BLAST executable ('bin' folder) can be added to the system path 
 **Linux:**
 Create a folder and download and extract the file:  
 ```wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz```  
-```tar -zxvf pdbaa.tar.gz```
+```tar -zxvf pdbaa.tar.gz```  
 
 **Windows:**
 You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and for example 7-zip to extract the packages
@@ -54,13 +54,13 @@ You can use the update_blastdb.pl perl script that comes with the BLAST binaries
 perl update_blastdb.pl pdbaa
 "C:\Program Files\7-Zip\7z.exe" e -aoa pdbaa.tar.gz  
 "C:\Program Files\7-Zip\7z.exe" x -aoa pdbaa.tar
-```
+```  
 
-Example config.ini lines: 
-```DEFAULT_BLASTP = C:/blast/blast-2.7.1+/bin```  
+Example config.ini lines:   
+```DEFAULT_BLASTP = C:/blast/blast-2.7.1+/bin```   
 ```BLAST_DB = C:/blast/DB/```
 
-The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files and by using precalculated ASA files.
+The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files in advance and by using precalculated ASA files.
 
 ## DSSP
 
@@ -78,8 +78,8 @@ If you are interested in disordered regions you can download Iupred from http://
 ## Configuration
 
 The algorithm is run by executing "score_poisites.py" in the src/main directory.  
-Example usage:  
-```python score_poisites.py -t -1 -s -p 1 -b 4 "myinputfile.fasta" ..\results\myinput_results```
+Example usage (run.bat):  
+```python src/main/score_poisites.py -b 3 -t 1 src/main/test/test_input.fasta ./results```
 
 A config.ini file is created on the first run, and it needs to be modified to contain all the required 
 paths, such as BLAST (executable and DB).
