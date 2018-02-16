@@ -81,4 +81,4 @@ paths, such as BLAST (executable and DB).
 
 ## Input
 
-StructureMapper takes as its input FASTA formatted amino acid sequence files (.fasta) with asterisks ('\*') as point of interest (POI) markers. The input file can contain multiple sequences and each sequence can contain multiple POIs.
+StructureMapper takes as its input FASTA formatted amino acid sequence files (.fasta) with asterisks ('\*') as point of interest (POI) markers. The input file can contain multiple sequences and each sequence can contain multiple POIs. Each sequence should have a unique identifier in its header.
