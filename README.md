@@ -42,9 +42,7 @@ perl update_blastdb.pl pdbaa
 "C:\Program Files\7-Zip\7z.exe" e -aoa pdbaa.tar.gz
 "C:\Program Files\7-Zip\7z.exe" x -aoa pdbaa.tar
 
-The found homologous structures are downloaded if and when they are needed. For large dataset, the processing can be speeded up by downloading the
-PDB structure files and precalculating ASA and ASA_SC files.
-
+The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files and precalculating ASA and ASA_SC files.
 
 DSSP:
 
