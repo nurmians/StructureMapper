@@ -1887,7 +1887,8 @@ def main():
 
     align_folder = InsertFolderSeparator( output_folder + "align" )
     result_folder = InsertFolderSeparator( output_folder + "results" )
-    disorder_file = output_folder + "disorder_predictions.txt"
+    disorder_file = None
+
     custom_cols_file = output_folder + CUSTOM_COLS_FILE
     if reset:
         try: os.remove( custom_cols_file)
@@ -2027,6 +2028,9 @@ def main():
 
         if len( config["DEFAULT_IUPRED"]):
             if os.path.isfile( config["DEFAULT_IUPRED"]):
+
+                disorder_file = output_folder + "disorder_predictions.txt"
+                
                 print ""
                 WriteProgress( "MAIN: Running disorder predictions")
                 print ""
