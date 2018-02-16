@@ -49,7 +49,7 @@ try:
     from Bio.Blast.Applications import NcbiblastxCommandline
     from Bio.PDB.PDBParser import PDBParser
     from Bio.PDB.PDBList import PDBList
-except ImportError
+except ImportError:
     stderr.write("Biopython installation not found. Try running: 'pip install biopython'.")  
 
 
