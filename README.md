@@ -68,7 +68,7 @@ If you are interested in disordered regions you can download Iupred from http://
 
 # Configuration
 
-The algorithm is run by running "score_poisites.py" in the src/main directory.
+The algorithm is run by executing "score_poisites.py" in the src/main directory.
 Example usage: "python score_poisites.py-t -1 -s -p 1 -b 4 "myinputfile.fasta" ..\results\myinput_results"
 
 A config.ini file is created on the first run, and it needs to be modified to contain all the required 
