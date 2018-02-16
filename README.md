@@ -11,8 +11,7 @@ https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformati
 
 ## Installing the algorithm
 
-Only a Python 2.7 installation is required for running the algorithm. For faster processing, it is recommended that 
-additional executables are installed locally. The algorithm has been run and tested on Windows and Linux machines.
+Only a Python 2.7 and [BLAST](https://blast.ncbi.nlm.nih.gov) installations are required for running the algorithm locally. For faster processing, it is recommended that additional executables are also installed locally. The algorithm has been run and tested on Windows and Linux machines.
 
 ## Python
 
