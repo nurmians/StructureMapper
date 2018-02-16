@@ -24,6 +24,7 @@ the biopython module might require also the package libpython2.7-dev
 Install required python modules using pip:
 
 pip install biopython
+
 pip install numpy
 
 # BLAST
