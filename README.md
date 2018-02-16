@@ -17,11 +17,11 @@ additional executables are installed locally. The algorithm has been run and tes
 ## Python
 
 Install Python first. The algorithm is written using Python 2.7.
-#### Linux: ```sudo apt-get install python2.7```
-#### Windows: https://www.python.org/downloads/windows/
+**Linux:** ```sudo apt-get install python2.7```
+**Windows:** https://www.python.org/downloads/windows/
 
 the biopython module might require also the package libpython2.7-dev
-#### Linux: ```sudo apt-get install libpython2.7-dev``` (linux)
+**Linux:** ```sudo apt-get install libpython2.7-dev```
 
 Install required python modules using pip:
 
@@ -41,12 +41,12 @@ Or simply download the suitable executable files for your system:
 Binaries:
 ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-### Linux:
+**Linux:**
 Create a folder and download and extract the file
 ```wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz```
 ```tar -zxvf pdbaa.tar.gz```
 
-### Windows:
+**Windows:**
 You can use the update_blastdb.pl perl script that comes with the BLAST binaries package and for example 7-zip to extract the packages
 
 ```
@@ -61,7 +61,7 @@ The homologous structures are downloaded if and when they are needed. For large 
 
 The algorithm uses DSSP for secondary structure evaluations. 
 Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
-#### Linux: ```wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64```
+**Linux:** ```wget ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.0.4-linux-amd64```
 make sure to set ```chmod a+x dssp-2.0.4-linux-amd64``` to be able to run it
 
 The algorithm can also dowload the dssp files if the DSSP algorithm is not installed locally.
@@ -72,7 +72,7 @@ If you are interested in disordered regions you can download Iupred from http://
 
 ## Configuration
 
-The algorithm is run by executing "score_poisites.py" in the src/main directory.
+The algorithm is run by executing "score_poisites.py" in the src/main directory.  
 Example usage:  
 ```python score_poisites.py -t -1 -s -p 1 -b 4 "myinputfile.fasta" ..\results\myinput_results```
 
