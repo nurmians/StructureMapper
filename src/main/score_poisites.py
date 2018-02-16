@@ -50,7 +50,8 @@ try:
     from Bio.PDB.PDBParser import PDBParser
     from Bio.PDB.PDBList import PDBList
 except ImportError:
-    stderr.write("Biopython installation not found. Try running: 'pip install biopython'.")  
+    stderr.write("Biopython installation not found. Try running: 'pip install biopython numpy'.\n")
+    sys.exit( -1) 
 
 
 from format_results import *
@@ -871,9 +872,6 @@ def SetPymolLinkCol( g_entry, g_entry_map, grouped_result_file_row, grouped_row_
     except Exception:
         sys.stderr.write( "PYMOL VIEW ERROR: Unexpected error: %s\n" % sys.exc_info()[0])
         raise
-
-    #DEBUG
-    #sys.exit( 0)
 
 
 #Write Pymol startup scripts into a single file to avoid creating thousands of extra files
@@ -1887,6 +1885,7 @@ def main():
 
     align_folder = InsertFolderSeparator( output_folder + "align" )
     result_folder = InsertFolderSeparator( output_folder + "results" )
+
     disorder_file = None
 
     custom_cols_file = output_folder + CUSTOM_COLS_FILE
@@ -2028,9 +2027,8 @@ def main():
 
         if len( config["DEFAULT_IUPRED"]):
             if os.path.isfile( config["DEFAULT_IUPRED"]):
-
                 disorder_file = output_folder + "disorder_predictions.txt"
-                
+
                 print ""
                 WriteProgress( "MAIN: Running disorder predictions")
                 print ""

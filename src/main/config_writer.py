@@ -189,7 +189,7 @@ def WriteConfig( aConfigFile, aCustomSettings={}, aAutoConfig=False):
         default_val = '' if not aAutoConfig else FindFolderThatContainsFile( "blastp.exe", "blast\\.exe", DriveLetter(), aLookFromDriveC=True)
         if aAutoConfig and len( default_val): print "Blastp executable found in '%s'.  [OK]" % default_val
         elif aAutoConfig: print "WARNING: Could not locate Blastp executable. This setting need to be set before using the algorithm (if the executable is not in system path)."
-        config.set('Directories', '# BLASTP (protein Blast) executable for finding holomolgous structures.')
+        config.set('Directories', '# BLASTP (protein Blast) executable for finding homologous structures.')
         SetConfig(('Directories', 'DEFAULT_BLASTP', default_val), aCustomSettings, config)
 
         default_val = '' if not aAutoConfig else FindFile( "iupred.exe", "iupred\\.exe", DriveLetter(), aLookFromDriveC=True)
