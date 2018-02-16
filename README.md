@@ -45,7 +45,7 @@ perl update_blastdb.pl pdbaa
 
 The homologous structures are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files and precalculating ASA and ASA_SC files.
 
-# DSSP:
+# DSSP
 
 The algorithm uses DSSP for secondary structure evaluations. 
 Available at: ftp://ftp.cmbi.ru.nl/pub/software/dssp/
