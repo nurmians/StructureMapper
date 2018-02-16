@@ -78,3 +78,7 @@ Example usage:
 
 A config.ini file is created on the first run, and it needs to be modified to contain all the required 
 paths, such as BLAST (executable and DB).
+
+## Input
+
+StructureMapper takes as its input FASTA formatted amino acid sequence files (.fasta) with asterisks ('\*') as point of interest (POI) markers. The input file can contain multiple sequences and each sequence can contain multiple POIs.
