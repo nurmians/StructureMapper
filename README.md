@@ -60,11 +60,11 @@ perl update_blastdb.pl pdbaa
 "C:\Program Files\7-Zip\7z.exe" x -aoa pdbaa.tar
 ```  
 
-Example config.ini lines:   
+A config.ini file is created on first run of the StructureMapper algorithm and it needs to be modified to contain the paths to the BLAST DB and executable. Example config.ini lines:   
 ```DEFAULT_BLASTP = C:/blast/blast-2.7.1+/bin```   
 ```BLAST_DB = C:/blast/DB/```
 
-The structures required for the analysis are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files in advance and by using precalculated ASA files.
+You can also try running StructureMapper with the --autoconfig flag. The structures required for the analysis are downloaded if and when they are needed. For large datasets, the processing can be speeded up by downloading the PDB structure files in advance and by using precalculated ASA files.
 
 ## DSSP
 
